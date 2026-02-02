@@ -26,12 +26,22 @@
       })
       .join("");
 
-    const linksHtml = (data.links || [])
-      .map((link) => {
-        const label = link.label ? ` aria-label="${link.label}" title="${link.label}"` : "";
-        return `<a href="${link.href}"${label}><i class="${link.iconClass}"></i></a>`;
+    const linkItems = (data.links || []).map((link) => {
+      const label = link.label ? ` aria-label="${link.label}" title="${link.label}"` : "";
+      if (link.imgSrc) {
+        return `<a href="${link.href}"${label}><img class="icon-hf" src="${link.imgSrc}" alt="${link.label || "Hugging Face"}"></a>`;
+      }
+      return `<a href="${link.href}"${label}><i class="${link.iconClass}"></i></a>`;
+    });
+
+    const linksHtml = linkItems
+      .map((item, index) => {
+        if (index === 0) {
+          return item;
+        }
+        return `<span class="link-sep">|</span>${item}`;
       })
-      .join(" &nbsp;|&nbsp; ");
+      .join("");
 
     container.innerHTML = `
       <div class="sidebar-card">
@@ -40,7 +50,7 @@
         </a>
         <p class="sidebar-name">${data.name}</p>
         ${linesHtml}
-        <p class="sidebar-links">${linksHtml}</p>
+        <div class="sidebar-links">${linksHtml}</div>
       </div>
     `;
   };

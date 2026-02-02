@@ -13,6 +13,7 @@
     links: [
       { href: "mailto:yibinwang1121@163.com", iconClass: "fa fa-envelope icon-lg icon-email", label: "Email" },
       { href: "https://github.com/CodeGoat24", iconClass: "fa fa-github icon-lg icon-github", label: "GitHub" },
+      { href: "https://huggingface.co/CodeGoat24", imgSrc: "https://huggingface.co/front/assets/huggingface_logo-noborder.svg", label: "Hugging Face" },
       { href: "https://scholar.google.com.hk/citations?hl=zh-CN&user=FQeuWTYAAAAJ&view_op=list_works&gmla=AC6lMd-mF1zVDTZ5sDF-ymf2hiFg4hqZJc6yqlrVH4Ob_LB9047WcRkzohmX5yQA9_6h2JLG712dbRpyPwRYiy18a3r4tHJB_ZB48OgMkVI", iconClass: "ai ai-google-scholar icon-lg icon-scholar", label: "Google Scholar" }
     ],
     avatar: {

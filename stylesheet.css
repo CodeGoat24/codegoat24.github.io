@@ -226,10 +226,27 @@ main.page {
 
 .sidebar-links {
   margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
 
 .sidebar-links i {
   font-size: 34px;
+}
+
+.icon-hf {
+  width: 34px;
+  height: 34px;
+  vertical-align: middle;
+}
+
+.link-sep {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1;
 }
 
 table.page-table {
