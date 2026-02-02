@@ -36,17 +36,17 @@
 
         return `
           <tr>
-            <td class="thumb-cell">
-              <a href="${item.image.src}"><img src="${item.image.src}" alt="${item.image.alt}"></a>
-            </td>
             <td class="content-cell">
               <span class="papertitle">${item.title}</span>
               <br>
-              ${highlightAuthor(item.authors)}
+              <span class="authors-line">${highlightAuthor(item.authors)}</span>
               <br>
               ${venueHtml}
               ${linksHtml}
               ${extraHtml}
+            </td>
+            <td class="thumb-cell">
+              <a href="${item.image.src}"><img src="${item.image.src}" alt="${item.image.alt}"></a>
             </td>
           </tr>
         `;

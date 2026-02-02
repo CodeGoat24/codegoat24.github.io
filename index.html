@@ -15,13 +15,35 @@
   </head>
 
   <body>
-    <main class="page">
-    <table class="page-table"><tbody>
-      <tr>
-        <td class="cell-tight">
-          <table class="section-table"><tbody id="intro-section"></tbody></table>
-		
-          <table class="section-table"><tbody>
+    <nav class="top-nav">
+      <div class="nav-inner">
+        <a class="nav-brand" href="#top">Yibin Wang</a>
+        <div class="nav-links">
+          <a href="#biography-section">Biography</a>
+          <a href="#recent-publications-section">Publications</a>
+          <a href="#selected-preprints-section">Preprints</a>
+          <a href="#selected-awards-section">Awards</a>
+          <a href="#other-publications-section">Other</a>
+          <a href="#research-experience-section">Experience</a>
+        </div>
+      </div>
+    </nav>
+    <main class="page" id="top">
+      <div class="layout">
+        <aside class="sidebar">
+          <div id="intro-sidebar"></div>
+        </aside>
+        <div class="content">
+          <table class="section-table" id="biography-section"><tbody>
+              <tr>
+              <td class="section-cell">
+                <h2>Biography</h2>
+                <div id="biography-content"></div>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table class="section-table" id="recent-publications-section"><tbody>
               <tr>
               <td class="section-cell">
                 <h2>Recent Publications</h2>
@@ -35,7 +57,7 @@
           <table class="section-table pub-table"><tbody id="recent-publications"></tbody></table>
 
 
-<table class="section-table"><tbody>
+          <table class="section-table" id="selected-preprints-section"><tbody>
               <tr>
               <td class="section-cell">
                 <h2>Selected Preprints</h2>
@@ -46,11 +68,7 @@
           <table class="section-table pub-table"><tbody id="selected-preprints"></tbody></table>
 
 
-
-
-
-
-	<table class="section-table"><tbody>
+          <table class="section-table" id="selected-awards-section"><tbody>
             <tr>
             <td class="section-cell">
               <h2>Selected Awards</h2>
@@ -60,16 +78,16 @@
         </tbody></table>
             
           
-          <table class="section-table"><tbody>
+          <table class="section-table" id="other-publications-section"><tbody>
             <tr>
             <td class="section-cell">
               <h2>Other Publications</h2>
-              <div id="other-publications"></div>
+              <div id="other-publications" class="other-publications"></div>
             </td>
           </tr>
         </tbody></table>
 
-	<table class="section-table"><tbody>
+          <table class="section-table" id="research-experience-section"><tbody>
             <tr>
             <td class="section-cell">
               <h2>Research Experience</h2>
@@ -78,8 +96,9 @@
           </tr>
         </tbody></table>
 
-	<table class="section-table"><tbody id="research-experience"></tbody></table>
-
+          <table class="section-table"><tbody id="research-experience"></tbody></table>
+        </div>
+      </div>
     </main>
 
   <script src="scripts/publications-data.js"></script>
