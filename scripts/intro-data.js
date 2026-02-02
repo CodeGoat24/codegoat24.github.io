@@ -1,6 +1,6 @@
 (() => {
   window.introData = {
-    name: "Yibin Wang (王逸彬)",
+    name: "Yibin Wang",
     sidebarLines: [
       { text: "Joint PhD Student (2024–2029)", level: "primary" },
       { text: "Fudan University & SII", level: "primary" },
