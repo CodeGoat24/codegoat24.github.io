@@ -4,6 +4,17 @@
     return;
   }
 
+  const highlightAuthor = (html) => {
+    let text = String(html).replace(
+      /<strong>Yibin Wang<\/strong>/g,
+      '<span class="author-me">Yibin Wang</span>'
+    );
+    if (!text.includes("author-me")) {
+      text = text.replace(/\bYibin Wang\b/g, '<span class="author-me">Yibin Wang</span>');
+    }
+    return text;
+  };
+
   const renderPublications = (items, targetId) => {
     const container = document.getElementById(targetId);
     if (!container) {
@@ -31,7 +42,7 @@
             <td class="content-cell">
               <span class="papertitle">${item.title}</span>
               <br>
-              ${item.authors}
+              ${highlightAuthor(item.authors)}
               <br>
               ${venueHtml}
               ${linksHtml}

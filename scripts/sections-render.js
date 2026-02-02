@@ -1,4 +1,15 @@
 (() => {
+  const highlightAuthor = (html) => {
+    let text = String(html).replace(
+      /<strong>Yibin Wang<\/strong>/g,
+      '<span class="author-me">Yibin Wang</span>'
+    );
+    if (!text.includes("author-me")) {
+      text = text.replace(/\bYibin Wang\b/g, '<span class="author-me">Yibin Wang</span>');
+    }
+    return text;
+  };
+
   const renderIntro = (data, targetId) => {
     const container = document.getElementById(targetId);
     if (!container || !data) {
@@ -48,7 +59,7 @@
     }
 
     container.innerHTML = (items || [])
-      .map((item) => `<p>${String(item).trim()}</p>`)
+      .map((item) => `<p>${highlightAuthor(String(item).trim())}</p>`)
       .join("");
   };
 

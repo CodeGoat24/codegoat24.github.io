@@ -371,6 +371,11 @@ h2 {
   display: block;
 }
 
+.author-me {
+  color: #b55400;
+  font-weight: 700;
+}
+
 .section-cell {
   padding: 22px 20px;
   width: 100%;
