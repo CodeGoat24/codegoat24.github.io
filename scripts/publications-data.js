@@ -107,12 +107,13 @@
         authors: "<strong>Yibin Wang</strong>, Yuhang Zang, Feng Han, Yujie Zhou, Jiazi Bu, Cheng Jin, <br> Jiaqi Wang.",
         links: [
           { href: "https://codegoat24.github.io/UnifiedReward/flex", text: "project page", className: "project", icon: "fa fa-link" },
-          { href: "https://github.com/CodeGoat24/UnifiedReward/blob/main/UnifiedReward-Flex/Tech_Report_UnifiedReward_Flex.pdf", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
+          { href: "https://arxiv.org/abs/2602.02380", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
           { href: "https://github.com/CodeGoat24/UnifiedReward", text: "code", className: "code", icon: "fa fa-github" }
         ],
         extraHtml: `
           <p></p>
           <br>
+          <a href="https://arxiv.org/abs/2602.02380" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2602.02380-B31B1B.svg" /></a>
           <a href="https://github.com/CodeGoat24/Pref-GRPO" target="_blank" rel="noopener noreferrer"><img alt="Code" src="https://img.shields.io/github/stars/CodeGoat24/UnifiedReward.svg?style=social&amp;label=UnifiedReward"></a>
           ${citationBadge("QIV2ME_5wuYC")}
           <br>
