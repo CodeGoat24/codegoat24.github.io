@@ -104,7 +104,7 @@
       {
         image: { src: "images/unifiedreward_flex_teaser.png", alt: "UnifiedReward Flex teaser" },
         title: "Unified Personalized Reward Model for Vision Generation",
-        authors: "<strong>Yibin Wang</strong>, Yuhang Zang, Feng Han, Yujie Zhou, Jiazi Bu, Cheng Jin, <br> Jiaqi Wang.",
+        authors: "<strong>Yibin Wang</strong>, Yuhang Zang, Feng Han, Yujie Zhou, Jiazi Bu, Cheng Jin, Jiaqi Wang.",
         links: [
           { href: "https://codegoat24.github.io/UnifiedReward/flex", text: "project page", className: "project", icon: "fa fa-link" },
           { href: "https://arxiv.org/abs/2602.02380", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
