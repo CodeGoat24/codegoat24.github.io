@@ -53,6 +53,15 @@
       ${citationBadge("KlAtU1dfN6UC")}
     `,
     `
+      &bull; <span class="paper-title">G2RPO: Granular GRPO for Precise Reward in Flow Models</span>
+      <br>
+      <span class="paper-authors">Yujie Zhou, Pengyang Ling, Jiazi Bu, <strong>Yibin Wang</strong>, Yuhang Zang, Jiaqi Wang, Li Niu, Guangtao Zhai.</span> <br><span class="venue venue-cvpr">CVPR</span>, 2026
+      <br>
+      <a href="https://arxiv.org/pdf/2510.01982" target="_blank"> <img src="https://img.shields.io/badge/paper-B31B1B"> </a>
+      <a href="https://bujiazi.github.io/g2rpo.github.io/"><i class="fa fa-github icon-md icon-github"></i></a>
+      ${citationBadge("_kc_bZDykSQC")}
+    `,
+    `
       &bull; <span class="paper-title">Laboring on less labors: RPCA Paradigm for Pan-sharpening</span>
       <br>
       <span class="paper-authors">Honghui Xu, Chuangjie Fang, <strong>Yibin Wang</strong>, Jie Wu, Jianwei Zheng.</span> <br><span class="venue venue-iccv">ICCV</span> (CCF A), 2025
