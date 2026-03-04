@@ -139,7 +139,7 @@
           <br>
           <a href="https://arxiv.org/pdf/2511.01295" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2511.01295-B31B1B.svg" /></a>
           <a href="https://github.com/Maplebb/UniREditBench" target="_blank" rel="noopener noreferrer"><img alt="Code" src="https://img.shields.io/github/stars/Maplebb/UniREditBench.svg?style=social&amp;label=UniREditBench"></a>
-          ${citationBadge("qxL8FJ1GzNcC")}
+          ${citationBadge("mVmsd5A6BfQC")}
           <br>
           <a href="https://huggingface.co/datasets/maplebb/UniREditBench">
             <img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-UniREditBench-yellow">
@@ -225,7 +225,7 @@
           <br>
           <a href="https://arxiv.org/abs/2503.05236" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2503.05236-B31B1B.svg" /></a>
           <a href="https://github.com/CodeGoat24/UnifiedReward" target="_blank" rel="noopener noreferrer"><img alt="Code" src="https://img.shields.io/github/stars/CodeGoat24/UnifiedReward.svg?style=social&amp;label=Official"></a>
-          ${citationBadge("LkGwnXOMwfcC")}
+          ${citationBadge("4DMP91E08xMC")}
           <br>
           <a href="https://huggingface.co/collections/CodeGoat24/unifiedreward-training-data-67c300d4fd5eff00fa7f1ede">
             <img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Datasets-yellow">
@@ -252,7 +252,7 @@
           <br>
           <a href="https://arxiv.org/abs/2412.04814" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2412.04814-B31B1B.svg" /></a>
           <a href="https://github.com/CodeGoat24/LiFT" target="_blank" rel="noopener noreferrer"><img alt="Code" src="https://img.shields.io/github/stars/CodeGoat24/LiFT.svg?style=social&amp;label=Official"></a>
-          ${citationBadge("ufrVoPGSRksC")}
+          ${citationBadge("Wp0gIr-vW9MC")}
           <br>
           <a href="https://huggingface.co/collections/Fudan-FUXI/lift-hra-6760f063b04baaf6350c9d2e">
             <img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Datasets-yellow">

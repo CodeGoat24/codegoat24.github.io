@@ -127,19 +127,128 @@
     </table> -->
 
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script>
-      window.onload = function () {
-          var gsDataBaseUrl = 'https://raw.githubusercontent.com/codegoat24/assets/'
-          $.getJSON(gsDataBaseUrl + "google-scholar-stats/gs_data.json", function (data) {  
-              var citationEles = document.getElementsByClassName('show_paper_citations')
-              Array.prototype.forEach.call(citationEles, element => {
-                  var paperId = element.getAttribute('data')
-                  var numCitations = data['publications'][paperId]['num_citations']
-                  element.innerHTML = numCitations;
-              });
+    (() => {
+      const GS_DATA_URLS = [
+        "https://cdn.jsdelivr.net/gh/codegoat24/assets@google-scholar-stats/gs_data.json",
+        "https://raw.githubusercontent.com/codegoat24/assets/google-scholar-stats/gs_data.json"
+      ];
+      const CACHE_KEY = "gs_data_cache_v1";
+      const CACHE_TTL_MS = 12 * 60 * 60 * 1000;
+      const REQUEST_TIMEOUT_MS = 3500;
+      const FALLBACK_TEXT = "--";
+
+      const getCitationElements = () =>
+        Array.from(document.getElementsByClassName("show_paper_citations"));
+
+      const renderCitations = (data) => {
+        const publications = data && data.publications ? data.publications : {};
+        getCitationElements().forEach((element) => {
+          const paperId = element.getAttribute("data");
+          const numCitations =
+            publications[paperId] && publications[paperId].num_citations != null
+              ? publications[paperId].num_citations
+              : FALLBACK_TEXT;
+          element.textContent = String(numCitations);
+        });
+      };
+
+      const loadCache = () => {
+        try {
+          const raw = localStorage.getItem(CACHE_KEY);
+          if (!raw) {
+            return null;
+          }
+          const parsed = JSON.parse(raw);
+          if (!parsed || typeof parsed.ts !== "number" || !parsed.data) {
+            return null;
+          }
+          return parsed;
+        } catch (_error) {
+          return null;
+        }
+      };
+
+      const saveCache = (data) => {
+        try {
+          localStorage.setItem(
+            CACHE_KEY,
+            JSON.stringify({
+              ts: Date.now(),
+              data
+            })
+          );
+        } catch (_error) {
+          // Ignore storage failures (private mode / quota).
+        }
+      };
+
+      const fetchJsonWithTimeout = async (url, timeoutMs) => {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), timeoutMs);
+        try {
+          const response = await fetch(url, {
+            cache: "no-store",
+            signal: controller.signal
           });
+          if (!response.ok) {
+            throw new Error(`Request failed: ${response.status}`);
+          }
+          return await response.json();
+        } finally {
+          clearTimeout(timeout);
+        }
+      };
+
+      const fetchGsData = async () => {
+        for (const url of GS_DATA_URLS) {
+          try {
+            return await fetchJsonWithTimeout(url, REQUEST_TIMEOUT_MS);
+          } catch (_error) {
+            // Try the next mirror.
+          }
+        }
+        throw new Error("Failed to fetch citation data from all mirrors.");
+      };
+
+      const refreshCitationsInBackground = async () => {
+        try {
+          const data = await fetchGsData();
+          renderCitations(data);
+          saveCache(data);
+        } catch (_error) {
+          // Keep cached or fallback values.
+        }
+      };
+
+      const initCitations = async () => {
+        const cached = loadCache();
+        const hasCachedData = Boolean(cached && cached.data);
+
+        if (hasCachedData) {
+          renderCitations(cached.data);
+        } else {
+          renderCitations(null);
+        }
+
+        const cacheIsFresh =
+          hasCachedData && Date.now() - cached.ts < CACHE_TTL_MS;
+        if (cacheIsFresh) {
+          refreshCitationsInBackground();
+          return;
+        }
+
+        await refreshCitationsInBackground();
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initCitations, {
+          once: true
+        });
+      } else {
+        initCitations();
       }
+    })();
   </script>
   </body>
 </html>
