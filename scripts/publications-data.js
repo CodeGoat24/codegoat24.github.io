@@ -282,6 +282,36 @@
     `
   };
 
+  const geometryZero = {
+    image: { src: "images/gcpo_teaser.png", alt: "GeometryZero teaser" },
+    title: "GeometryZero: Improving Geometry Solving for LLM with Group Contrastive Policy Optimization",
+    authors: "Yikun Wang, <strong>Yibin Wang</strong>, Dianyi Wang, Zimian Peng, Qipeng Guo, Dacheng Tao, Jiaqi Wang.",
+    links: [
+      { href: "https://arxiv.org/pdf/2506.07160", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
+      { href: "https://github.com/ekonwang/GeometryZero", text: "code", className: "code", icon: "fa fa-github" }
+    ],
+    extraHtml: `
+      <p></p>
+      <a href="https://arxiv.org/abs/2506.07160" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2506.07160-B31B1B.svg" /></a>
+      ${citationBadge("0EnyYjriUFMC")}
+    `
+  };
+
+  const mvGrpo = {
+    image: { src: "images/MVGRPO_teaser.png", alt: "MV-GRPO teaser" },
+    title: "From Sparse to Dense: Multi-View GRPO for Flow Models via Augmented Condition Space",
+    authors: "Jiazi Bu, Pengyang Ling, Yujie Zhou, <strong>Yibin Wang</strong>, Yuhang Zang, Tianyi Wei, Xiaohang Zhan, Jiaqi Wang, Tong Wu, Xingang Pan, Dahua Lin.",
+    links: [
+      { href: "https://bujiazi.github.io/mvgrpo.github.io/", text: "project page", className: "project", icon: "fa fa-link" },
+      { href: "https://arxiv.org/pdf/2603.12648", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" }
+    ],
+    extraHtml: `
+      <p></p>
+      <a href="https://arxiv.org/abs/2603.12648" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2603.12648-B31B1B.svg" /></a>
+      ${citationBadge("ZeXyd9-uunAC")}
+    `
+  };
+
   const gnltn = {
     image: { src: "images/GNLTN_teaser.png", alt: "GNLTN teaser" },
     title: "Nonlinear Learnable Triple-Domain Transform Tensor Nuclear Norm for Hyperspectral Image Super-Resolution",
@@ -402,10 +432,12 @@
       }
     ],
     selectedWorks: [
+      mvGrpo,
       g2rpo,
       diCache,
       inMind,
       meepleLm,
+      geometryZero,
       lift,
       dreamText,
       faceDiffuser,
