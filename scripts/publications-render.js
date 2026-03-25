@@ -15,13 +15,8 @@
     return text;
   };
 
-  const renderPublications = (items, targetId) => {
-    const container = document.getElementById(targetId);
-    if (!container) {
-      return;
-    }
-
-    container.innerHTML = (items || [])
+  const renderPublicationItems = (items) =>
+    (items || [])
       .map((item) => {
         const linksHtml = (item.links || [])
           .map((link) => {
@@ -35,7 +30,7 @@
                 <br>` : "";
 
         return `
-          <tr>
+          <tr class="publication-row">
             <td class="content-cell">
               <span class="papertitle">${item.title}</span>
               <br>
@@ -52,8 +47,39 @@
         `;
       })
       .join("");
+
+  const renderPublications = (items, targetId) => {
+    const container = document.getElementById(targetId);
+    if (!container) {
+      return;
+    }
+
+    container.innerHTML = renderPublicationItems(items);
   };
 
-  renderPublications(data.recentPublications, "recent-publications");
-  renderPublications(data.selectedPreprints, "selected-preprints");
+  const renderPublicationGroups = (groups, targetId) => {
+    const container = document.getElementById(targetId);
+    if (!container) {
+      return;
+    }
+
+    container.innerHTML = (groups || [])
+      .map(
+        (group) => `
+          <tr class="pub-group-row">
+            <td class="pub-group-cell" colspan="2">
+              <div class="pub-group-header">
+                <h3 class="pub-group-title">${group.title}</h3>
+                <span class="pub-group-divider" aria-hidden="true"></span>
+              </div>
+            </td>
+          </tr>
+          ${renderPublicationItems(group.items)}
+        `
+      )
+      .join("");
+  };
+
+  renderPublicationGroups(data.unifiedRewardSeriesGroups, "unifiedreward-series");
+  renderPublications(data.selectedWorks, "selected-works");
 })();
