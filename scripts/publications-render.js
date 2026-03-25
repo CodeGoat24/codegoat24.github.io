@@ -18,16 +18,25 @@
   const renderPublicationItems = (items) =>
     (items || [])
       .map((item) => {
+        const extraHtml = item.extraHtml || "";
+        const hasGithubLinkInExtra = /github\.com/i.test(extraHtml);
         const linksHtml = (item.links || [])
+          .filter((link) => !(hasGithubLinkInExtra && /github\.com/i.test(link.href || "")))
           .map((link) => {
+            if (link.html) {
+              return link.html;
+            }
             const icon = link.icon ? `<i class="${link.icon}"></i>` : "";
             const cls = link.className ? `link-chip ${link.className}` : "link-chip";
             return `<a class="${cls}" href="${link.href}">${icon}${link.text}</a>`;
           })
           .join("");
-        const extraHtml = item.extraHtml || "";
         const venueHtml = item.venue ? `${item.venue}
                 <br>` : "";
+        const thumbHtml =
+          item.image && item.image.src
+            ? `<a href="${item.image.src}"><img src="${item.image.src}" alt="${item.image.alt}"></a>`
+            : `<div class="thumb-placeholder">${item.placeholderText || "Teaser"}</div>`;
 
         return `
           <tr class="publication-row">
@@ -41,7 +50,7 @@
               ${extraHtml}
             </td>
             <td class="thumb-cell">
-              <a href="${item.image.src}"><img src="${item.image.src}" alt="${item.image.alt}"></a>
+              ${thumbHtml}
             </td>
           </tr>
         `;

@@ -290,6 +290,24 @@ table.pub-table td.thumb-cell a:focus img {
   box-shadow: 0 12px 24px rgba(16, 24, 40, 0.18);
 }
 
+.thumb-placeholder {
+  width: 100%;
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #f6f8fb 0%, #edf3ff 100%);
+  color: var(--muted);
+  font-family: 'Merriweather', 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
 table.pub-table {
   border-collapse: separate;
   border-spacing: 0 14px;
@@ -332,7 +350,7 @@ table.pub-table tr.publication-row td:last-child {
 }
 
 .pub-group-cell {
-  padding: 4px 4px 0;
+  padding: 4px 20px 0;
   border: none;
   background: transparent;
 }
@@ -360,7 +378,7 @@ table.pub-table tr.publication-row td:last-child {
 }
 
 tbody .pub-group-row:first-child .pub-group-cell {
-  padding-top: 0;
+  padding: 0 20px 0;
 }
 
 body,
@@ -528,6 +546,16 @@ h2 {
   background: #f3fff6;
   color: #0f7a46;
   border-color: #c7efd6;
+}
+
+.inline-citation-badge {
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 4px 6px 4px 0;
+}
+
+.inline-citation-badge a {
+  display: inline-flex;
 }
 
 .center {

@@ -218,7 +218,8 @@
     venue: '<span class="venue venue-cvpr">CVPR</span>, 2026',
     links: [
       { href: "https://bujiazi.github.io/g2rpo.github.io/", text: "project page", className: "project", icon: "fa fa-link" },
-      { href: "https://arxiv.org/pdf/2510.01982", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" }
+      { href: "https://arxiv.org/pdf/2510.01982", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
+      { href: "https://github.com/bcmi/Granular-GRPO", text: "code", className: "code", icon: "fa fa-github" }
     ],
     extraHtml: `
       <p></p>
@@ -234,6 +235,7 @@
     authors: "Jiazi Bu, Pengyang Ling, Yujie Zhou, <strong>Yibin Wang</strong>, Yuhang Zang, Tong Wu, Dahua Lin, Jiaqi Wang.",
     venue: '<span class="venue venue-iclr">ICLR</span>, 2026',
     links: [
+      { href: "https://bujiazi.github.io/dicache.github.io/", text: "project page", className: "project", icon: "fa fa-link" },
       { href: "https://arxiv.org/pdf/2508.17356", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
       { href: "https://github.com/Bujiazi/DiCache", text: "code", className: "code", icon: "fa fa-github" }
     ],
@@ -252,7 +254,8 @@
     authors: "Zizhen Li, Chuanhao Li, <strong>Yibin Wang</strong>, Qi Chen, Diping Song, Yukang Feng, Jianwen Sun, Jiaxin Ai, Fanrui Zhang, Mingzhu Sun, Kaipeng Zhang.",
     venue: '<span class="venue venue-emnlp">EMNLP</span> (Main), 2025',
     links: [
-      { href: "https://arxiv.org/pdf/2508.16072", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
+      { href: "https://aclanthology.org/2025.emnlp-main.254.pdf", text: "paper", className: "project", icon: "fa fa-file-text-o" },
+      { href: "https://arxiv.org/abs/2508.16072", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
       { href: "https://github.com/leroy9472/InMind", text: "code", className: "code", icon: "fa fa-github" }
     ],
     extraHtml: `
@@ -264,6 +267,21 @@
     `
   };
 
+  const meepleLm = {
+    image: { src: "images/MeepLM_teaser.png", alt: "MeepleLM teaser" },
+    title: "MeepleLM: A Virtual Playtester Simulating Diverse Subjective Experiences",
+    authors: "Zizhen Li, Chuanhao Li, <strong>Yibin Wang</strong>, Yukang Feng, Jianwen Sun, Jiaxin Ai, Fanrui Zhang, Mingzhu Sun, Yifei Huang, Kaipeng Zhang.",
+    links: [
+      { href: "https://arxiv.org/abs/2601.07251", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
+      { href: "https://github.com/leroy9472/MeepleLM", text: "code", className: "code", icon: "fa fa-github" }
+    ],
+    extraHtml: `
+      <p></p>
+      <a href="https://arxiv.org/abs/2601.07251" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2601.07251-B31B1B.svg" /></a>
+      ${citationBadge("L8Ckcad2t8MC")}
+    `
+  };
+
   const gnltn = {
     image: { src: "images/GNLTN_teaser.png", alt: "GNLTN teaser" },
     title: "Nonlinear Learnable Triple-Domain Transform Tensor Nuclear Norm for Hyperspectral Image Super-Resolution",
@@ -271,15 +289,10 @@
     venue: '<span class="venue venue-tgrs">TGRS</span>, 2025',
     links: [
       { href: "https://ieeexplore.ieee.org/document/10994802", text: "paper", className: "project", icon: "fa fa-file-text-o" },
-      { href: "https://github.com/xuhonghui96/GNLTN", text: "code", className: "code", icon: "fa fa-github" }
+      { href: "https://github.com/xuhonghui96/GNLTN", text: "code", className: "code", icon: "fa fa-github" },
+      { html: `<span class="inline-citation-badge">${citationBadge("hqOjcs7Dif8C")}</span>` }
     ],
-    extraHtml: `
-      <p></p>
-      <br>
-      <a href="https://ieeexplore.ieee.org/document/10994802" target="_blank"><img src="https://img.shields.io/badge/paper-B31B1B" /></a>
-      <a href="https://github.com/xuhonghui96/GNLTN" target="_blank" rel="noopener noreferrer"><img alt="Code" src="https://img.shields.io/github/stars/xuhonghui96/GNLTN.svg?style=social&amp;label=GNLTN"></a>
-      ${citationBadge("hqOjcs7Dif8C")}
-    `
+    extraHtml: ``
   };
 
   const rpcaPansharpening = {
@@ -288,14 +301,10 @@
     authors: "Honghui Xu, Chuangjie Fang, <strong>Yibin Wang</strong>, Jie Wu, Jianwei Zheng.",
     venue: '<span class="venue venue-iccv">ICCV</span>, 2025',
     links: [
-      { href: "https://openaccess.thecvf.com/content/ICCV2025/html/Xu_Laboring_on_less_labors_RPCA_Paradigm_for_Pan-sharpening_ICCV_2025_paper.html", text: "paper", className: "project", icon: "fa fa-file-text-o" }
+      { href: "https://openaccess.thecvf.com/content/ICCV2025/html/Xu_Laboring_on_less_labors_RPCA_Paradigm_for_Pan-sharpening_ICCV_2025_paper.html", text: "paper", className: "project", icon: "fa fa-file-text-o" },
+      { html: `<span class="inline-citation-badge">${citationBadge("5nxA0vEk-isC")}</span>` }
     ],
-    extraHtml: `
-      <p></p>
-      <br>
-      <a href="https://openaccess.thecvf.com/content/ICCV2025/html/Xu_Laboring_on_less_labors_RPCA_Paradigm_for_Pan-sharpening_ICCV_2025_paper.html" target="_blank"><img src="https://img.shields.io/badge/paper-B31B1B" /></a>
-      ${citationBadge("5nxA0vEk-isC")}
-    `
+    extraHtml: ``
   };
 
   const magicFace = {
@@ -396,6 +405,7 @@
       g2rpo,
       diCache,
       inMind,
+      meepleLm,
       lift,
       dreamText,
       faceDiffuser,
