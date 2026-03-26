@@ -225,6 +225,7 @@
       <p></p>
       <br>
       <a href="https://arxiv.org/abs/2510.01982" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2510.01982-B31B1B.svg" /></a>
+      <a href="https://github.com/bcmi/Granular-GRPO" target="_blank" rel="noopener noreferrer"><img alt="Code" src="https://img.shields.io/github/stars/bcmi/Granular-GRPO.svg?style=social&amp;label=Official"></a>
       ${citationBadge("_kc_bZDykSQC")}
     `
   };
