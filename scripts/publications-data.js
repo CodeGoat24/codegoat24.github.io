@@ -88,7 +88,7 @@
       <br>
       <a href="https://arxiv.org/abs/2505.03318" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2505.03318-B31B1B.svg" /></a>
       <a href="https://github.com/CodeGoat24/UnifiedReward" target="_blank" rel="noopener noreferrer"><img alt="Code" src="https://img.shields.io/github/stars/CodeGoat24/UnifiedReward.svg?style=social&amp;label=Official"></a>
-      ${citationBadge("UebtZRa9Y70C")}
+      ${citationBadge("hC7cP41nSMkC")}
       <br>
       <a href="https://huggingface.co/collections/CodeGoat24/unifiedreward-training-data-67c300d4fd5eff00fa7f1ede">
         <img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Datasets-yellow">
@@ -226,7 +226,7 @@
       <br>
       <a href="https://arxiv.org/abs/2510.01982" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2510.01982-B31B1B.svg" /></a>
       <a href="https://github.com/bcmi/Granular-GRPO" target="_blank" rel="noopener noreferrer"><img alt="Code" src="https://img.shields.io/github/stars/bcmi/Granular-GRPO.svg?style=social&amp;label=Official"></a>
-      ${citationBadge("_kc_bZDykSQC")}
+      ${citationBadge("qUcmZB5y_30C")}
     `
   };
 
