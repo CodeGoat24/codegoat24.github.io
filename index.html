@@ -143,6 +143,25 @@
       const getCitationElements = () =>
         Array.from(document.getElementsByClassName("show_paper_citations"));
 
+      const normalizeCitationAliases = (data) => {
+        const aliasMap = window.citationAliasMap || {};
+        const publications = data && data.publications ? data.publications : null;
+        if (!publications) {
+          return data;
+        }
+
+        Object.entries(aliasMap).forEach(([targetId, sourceId]) => {
+          if (!publications[targetId] && publications[sourceId]) {
+            publications[targetId] = {
+              ...publications[sourceId],
+              author_pub_id: targetId
+            };
+          }
+        });
+
+        return data;
+      };
+
       const renderCitations = (data) => {
         const publications = data && data.publications ? data.publications : {};
         getCitationElements().forEach((element) => {
@@ -215,7 +234,7 @@
 
       const refreshCitationsInBackground = async () => {
         try {
-          const data = await fetchGsData();
+          const data = normalizeCitationAliases(await fetchGsData());
           renderCitations(data);
           saveCache(data);
         } catch (_error) {
@@ -228,7 +247,7 @@
         const hasCachedData = Boolean(cached && cached.data);
 
         if (hasCachedData) {
-          renderCitations(cached.data);
+          renderCitations(normalizeCitationAliases(cached.data));
         } else {
           renderCitations(null);
         }
