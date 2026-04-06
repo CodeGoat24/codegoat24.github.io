@@ -272,6 +272,7 @@
     image: { src: "images/MeepLM_teaser.png", alt: "MeepleLM teaser" },
     title: "MeepleLM: A Virtual Playtester Simulating Diverse Subjective Experiences",
     authors: "Zizhen Li, Chuanhao Li, <strong>Yibin Wang</strong>, Yukang Feng, Jianwen Sun, Jiaxin Ai, Fanrui Zhang, Mingzhu Sun, Yifei Huang, Kaipeng Zhang.",
+    venue: '<span class="venue venue-acl">ACL</span> (Main), 2026',
     links: [
       { href: "https://arxiv.org/abs/2601.07251", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
       { href: "https://github.com/leroy9472/MeepleLM", text: "code", className: "code", icon: "fa fa-github" }
@@ -287,6 +288,7 @@
     image: { src: "images/gcpo_teaser.png", alt: "GeometryZero teaser" },
     title: "GeometryZero: Improving Geometry Solving for LLM with Group Contrastive Policy Optimization",
     authors: "Yikun Wang, <strong>Yibin Wang</strong>, Dianyi Wang, Zimian Peng, Qipeng Guo, Dacheng Tao, Jiaqi Wang.",
+    venue: '<span class="venue venue-acl">ACL</span> (Findings), 2026',
     links: [
       { href: "https://arxiv.org/pdf/2506.07160", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
       { href: "https://github.com/ekonwang/GeometryZero", text: "code", className: "code", icon: "fa fa-github" }
