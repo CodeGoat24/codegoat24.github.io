@@ -15,11 +15,6 @@
     </a>
   `;
 
-  window.citationAliasMap = {
-    "FQeuWTYAAAAJ:hC7cP41nSMkC": "FQeuWTYAAAAJ:UebtZRa9Y70C",
-    "FQeuWTYAAAAJ:qUcmZB5y_30C": "FQeuWTYAAAAJ:_kc_bZDykSQC"
-  };
-
   const unifiedPersonalizedReward = {
     image: { src: "images/unifiedreward_flex_teaser.png", alt: "UnifiedReward Flex teaser" },
     title: "Unified Personalized Reward Model for Vision Generation",

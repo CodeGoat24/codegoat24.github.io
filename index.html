@@ -132,35 +132,16 @@
   <script>
     (() => {
       const GS_DATA_URLS = [
-        "https://cdn.jsdelivr.net/gh/codegoat24/assets@google-scholar-stats/gs_data.json",
-        "https://raw.githubusercontent.com/codegoat24/assets/google-scholar-stats/gs_data.json"
+        "https://raw.githubusercontent.com/codegoat24/assets/google-scholar-stats/gs_data.json",
+        "https://cdn.jsdelivr.net/gh/codegoat24/assets@google-scholar-stats/gs_data.json"
       ];
-      const CACHE_KEY = "gs_data_cache_v1";
+      const CACHE_KEY = "gs_data_cache_v2";
       const CACHE_TTL_MS = 12 * 60 * 60 * 1000;
       const REQUEST_TIMEOUT_MS = 3500;
       const FALLBACK_TEXT = "--";
 
       const getCitationElements = () =>
         Array.from(document.getElementsByClassName("show_paper_citations"));
-
-      const normalizeCitationAliases = (data) => {
-        const aliasMap = window.citationAliasMap || {};
-        const publications = data && data.publications ? data.publications : null;
-        if (!publications) {
-          return data;
-        }
-
-        Object.entries(aliasMap).forEach(([targetId, sourceId]) => {
-          if (!publications[targetId] && publications[sourceId]) {
-            publications[targetId] = {
-              ...publications[sourceId],
-              author_pub_id: targetId
-            };
-          }
-        });
-
-        return data;
-      };
 
       const renderCitations = (data) => {
         const publications = data && data.publications ? data.publications : {};
@@ -234,7 +215,7 @@
 
       const refreshCitationsInBackground = async () => {
         try {
-          const data = normalizeCitationAliases(await fetchGsData());
+          const data = await fetchGsData();
           renderCitations(data);
           saveCache(data);
         } catch (_error) {
@@ -247,7 +228,7 @@
         const hasCachedData = Boolean(cached && cached.data);
 
         if (hasCachedData) {
-          renderCitations(normalizeCitationAliases(cached.data));
+          renderCitations(cached.data);
         } else {
           renderCitations(null);
         }
