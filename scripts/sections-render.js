@@ -101,6 +101,16 @@
         const mentorHtml = item.mentorsHtml
           ? `\n              <br>\n              <strong>${mentorLabel}</strong>: ${item.mentorsHtml}`
           : "";
+        const datesHtml = item.periods
+          ? item.periods
+              .map((period) => {
+                const periodMentorHtml = period.mentorsHtml
+                  ? `\n              <br>\n              <strong>${mentorLabel}</strong>: ${period.mentorsHtml}`
+                  : "";
+                return `${period.dates}${periodMentorHtml}`;
+              })
+              .join("\n              <br>\n              <br>\n              ")
+          : item.dates;
 
         return `
           <tr>
@@ -117,7 +127,7 @@
               <br>
               ${item.location}
               <br>
-              ${item.dates}
+              ${datesHtml}
               <br>
             </td>
           </tr>

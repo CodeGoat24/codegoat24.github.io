@@ -5,7 +5,17 @@
       title: "Tencent Hunyuan",
       topic: "Multimodal Reinforcement Learning",
       location: "Shanghai, China",
-      dates: "Jun. 2025 - Present"
+      periods: [
+        {
+          dates: "May 2026 - Present",
+          mentorsHtml: "Dr. <a href=\"https://p2333.github.io/\">Tianyu Pang</a>"
+        },
+        {
+          dates: "Jun. 2025 - May 2026",
+          mentorsHtml: "Dr. <a href=\"https://chunyuwang.github.io/homepage/\">Chunyu Wang</a>"
+        }
+      ],
+      mentorLabel: "Mentor"
     },
     {
       logo: { src: "images/SHAILab_logo.png", alt: "Shanghai AI Lab logo" },
