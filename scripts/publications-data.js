@@ -272,7 +272,7 @@
     image: { src: "images/MeepLM_teaser.png", alt: "MeepleLM teaser" },
     title: "MeepleLM: A Virtual Playtester Simulating Diverse Subjective Experiences",
     authors: "Zizhen Li, Chuanhao Li, <strong>Yibin Wang</strong>, Yukang Feng, Jianwen Sun, Jiaxin Ai, Fanrui Zhang, Mingzhu Sun, Yifei Huang, Kaipeng Zhang.",
-    venue: '<span class="venue venue-acl">ACL</span> (Main), 2026',
+    venue: '<span class="venue venue-acl">ACL</span> (Main, Oral), 2026',
     links: [
       { href: "https://arxiv.org/abs/2601.07251", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
       { href: "https://github.com/leroy9472/MeepleLM", text: "code", className: "code", icon: "fa fa-github" }
