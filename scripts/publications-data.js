@@ -315,6 +315,36 @@
     `
   };
 
+  const paveGrpo = {
+    image: { src: "images/pavegrpo_teaser.png", alt: "Pave-GRPO teaser" },
+    title: "Pave-GRPO: Beyond Instantaneous Guidance through Principled Average Velocity Decomposition",
+    authors: "Pengyang Ling, Jiazi Bu, Yujie Zhou, <strong>Yibin Wang</strong>, Zhenyu Hu, Zihan Zhang, Yi Jin, Huaian Chen, Yuhang Zang.",
+    links: [
+      { href: "https://bujiazi.github.io/pavegrpo.github.io/", text: "project page", className: "project", icon: "fa fa-link" },
+      { href: "https://arxiv.org/abs/2606.01636", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" }
+    ],
+    extraHtml: `
+      <p></p>
+      <a href="https://arxiv.org/abs/2606.01636" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2606.01636-B31B1B.svg" /></a>
+      ${citationBadge("_Qo2XoVZTnwC")}
+    `
+  };
+
+  const adaGrpo = {
+    image: { src: "images/adagrpo_teaser.png", alt: "AdaGRPO teaser" },
+    title: "AdaGRPO: A Capability-Aware Adaptive Enhancement for Flow-based GRPO",
+    authors: "Jiazi Bu, Pengyang Ling, Yujie Zhou, <strong>Yibin Wang</strong>, Yuhang Zang, Tianyi Wei, Xiaohang Zhan, Jiaqi Wang, Tong Wu, Xingang Pan, Dahua Lin.",
+    links: [
+      { href: "https://bujiazi.github.io/adagrpo.github.io/", text: "project page", className: "project", icon: "fa fa-link" },
+      { href: "https://arxiv.org/abs/2606.06828", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" }
+    ],
+    extraHtml: `
+      <p></p>
+      <a href="https://arxiv.org/abs/2606.06828" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2606.06828-B31B1B.svg" /></a>
+      ${citationBadge("j3f4tGmQtD8C")}
+    `
+  };
+
   const gnltn = {
     image: { src: "images/GNLTN_teaser.png", alt: "GNLTN teaser" },
     title: "Nonlinear Learnable Triple-Domain Transform Tensor Nuclear Norm for Hyperspectral Image Super-Resolution",
@@ -435,6 +465,8 @@
       }
     ],
     selectedWorks: [
+      paveGrpo,
+      adaGrpo,
       mvGrpo,
       g2rpo,
       diCache,
