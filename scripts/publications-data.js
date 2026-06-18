@@ -156,6 +156,7 @@
     image: { src: "images/unireditbench_teaser.png", alt: "UniREditBench teaser" },
     title: "UniREditBench: A Unified Reasoning-based Image Editing Benchmark",
     authors: "Feng Han*,<strong>Yibin Wang</strong>*, Chenglin Li, Zheming Liang, Dianyi Wang, Yang Jiao, Zhipeng Wei, Chao Gong, Cheng Jin, Jingjing Chen, Jiaqi Wang.",
+    venue: '<span class="venue venue-eccv">ECCV</span>, 2026',
     links: [
       { href: "https://maplebb.github.io/UniREditBench/", text: "project page", className: "project", icon: "fa fa-link" },
       { href: "https://github.com/Maplebb/UniREditBench/blob/main/UniREditBench-Technical_Report.pdf", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
@@ -304,6 +305,7 @@
     image: { src: "images/MVGRPO_teaser.png", alt: "MV-GRPO teaser" },
     title: "From Sparse to Dense: Multi-View GRPO for Flow Models via Augmented Condition Space",
     authors: "Jiazi Bu, Pengyang Ling, Yujie Zhou, <strong>Yibin Wang</strong>, Yuhang Zang, Tianyi Wei, Xiaohang Zhan, Jiaqi Wang, Tong Wu, Xingang Pan, Dahua Lin.",
+    venue: '<span class="venue venue-eccv">ECCV</span>, 2026',
     links: [
       { href: "https://bujiazi.github.io/mvgrpo.github.io/", text: "project page", className: "project", icon: "fa fa-link" },
       { href: "https://arxiv.org/pdf/2603.12648", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" }
