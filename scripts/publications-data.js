@@ -15,6 +15,31 @@
     </a>
   `;
 
+  const worldReward = {
+    image: { src: "images/WorldReward_teaser.png", alt: "WorldReward teaser" },
+    title: "WorldReward: Reward Modeling for Camera-Conditioned World Models",
+    authors: "<strong>Yibin Wang</strong>, Zehan Wang, Junshu Tang, Zhimin Li, Yujie Zhou, Jiazi Bu, Pengyang Ling, Feng Han, Zhixiong Zhang, Long Xing, Shengyuan Ding, Ziang Li, Cheng Jin, Yuhang Zang, Jiaqi Wang, Tianyu Pang.",
+    links: [
+      { href: "https://codegoat24.github.io/WorldReward", text: "project page", className: "project", icon: "fa fa-link" },
+      { href: "https://arxiv.org/abs/2609.03952", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
+      { href: "https://github.com/CodeGoat24/WorldReward", text: "code", className: "code", icon: "fa fa-github" }
+    ],
+    extraHtml: `
+      <p></p>
+      <br>
+      <a href="https://arxiv.org/abs/2609.03952" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2609.03952-B31B1B.svg" /></a>
+      <a href="https://github.com/CodeGoat24/WorldReward" target="_blank" rel="noopener noreferrer"><img alt="Code" src="https://img.shields.io/github/stars/CodeGoat24/WorldReward.svg?style=social&amp;label=WorldReward"></a>
+      ${citationBadge("TFP_iSt0sucC")}
+      <br>
+      <a href="https://huggingface.co/collections/CodeGoat24/worldreward">
+        <img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Checkpoints-yellow">
+      </a>
+      <a href="https://huggingface.co/datasets/CodeGoat24/WorldReward-Bench">
+        <img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Benchmark-yellow">
+      </a>
+    `
+  };
+
   const unifiedPersonalizedReward = {
     image: { src: "images/unifiedreward_flex_teaser.png", alt: "UnifiedReward Flex teaser" },
     title: "Unified Personalized Reward Model for Vision Generation",
@@ -317,6 +342,27 @@
     `
   };
 
+  const hpsd = {
+    image: { src: "images/HPSD_teaser.png", alt: "HPSD teaser" },
+    title: "HPSD: Hybrid-Policy Self-Distillation for Text-Image-to-Video Diffusion Models",
+    authors: "Jiazi Bu, Pengyang Ling, Yujie Zhou, <strong>Yibin Wang</strong>, Yuhang Zang, Xuanlang Dai, Shengyuan Ding, Tianyi Wei, Xiaohang Zhan, Jiaqi Wang, Tong Wu, Dahua Lin, Xingang Pan.",
+    links: [
+      { href: "https://bujiazi.github.io/hpsd.github.io/", text: "project page", className: "project", icon: "fa fa-link" },
+      { href: "https://arxiv.org/abs/2608.13205", text: "arXiv", className: "arxiv", icon: "ai ai-arxiv" },
+      { href: "https://github.com/Bujiazi/HPSD", text: "code", className: "code", icon: "fa fa-github" }
+    ],
+    extraHtml: `
+      <p></p>
+      <a href="https://arxiv.org/abs/2608.13205" target="_blank"><img src="http://img.shields.io/badge/cs.CV-arXiv%3A2608.13205-B31B1B.svg" /></a>
+      <a href="https://github.com/Bujiazi/HPSD" target="_blank" rel="noopener noreferrer"><img alt="Code" src="https://img.shields.io/github/stars/Bujiazi/HPSD.svg?style=social&amp;label=HPSD"></a>
+      ${citationBadge("bEWYMUwI8FkC")}
+      <br>
+      <a href="https://huggingface.co/Bujiazi/HPSD">
+        <img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow">
+      </a>
+    `
+  };
+
   const paveGrpo = {
     image: { src: "images/pavegrpo_teaser.png", alt: "Pave-GRPO teaser" },
     title: "Pave-GRPO: Beyond Instantaneous Guidance through Principled Average Velocity Decomposition",
@@ -452,6 +498,7 @@
       {
         title: "Models and Methods",
         items: [
+          worldReward,
           unifiedPersonalizedReward,
           prefGrpo,
           unifiedReasoningReward,
@@ -467,6 +514,7 @@
       }
     ],
     selectedWorks: [
+      hpsd,
       paveGrpo,
       adaGrpo,
       mvGrpo,
